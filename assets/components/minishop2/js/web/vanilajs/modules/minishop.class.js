@@ -68,7 +68,7 @@ export default class MiniShop {
     async initialize() {
         if(!this.miniShop2Config.properties.length) { throw new Error('Не передан массив имён обработчиков'); }
 
-        await this.miniShop2Config.properties.forEach(property => {
+        this.miniShop2Config.properties.forEach(property => {
             this.setHandler(property);
         });
 
